@@ -4,4 +4,14 @@
 
 function doubleAge(objStr) {
   // TODO: your code
+  let obj = JSON.parse(objStr);
+  if ('age' in obj) {
+    obj.age *= 2;
+  } else {
+    obj.age = 0;
+  }
+  return JSON.stringify(obj);
+
 }
+// Example usage:
+console.log(doubleAge('{"name": "John", "age": 30}'));
